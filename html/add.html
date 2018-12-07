@@ -1,0 +1,152 @@
+<html>
+    <head>
+            <script src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"></script>
+            <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+        <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
+        <script type="text/javascript" src="../js/jquery.js"></script>
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+    </head>
+
+    <body>
+
+    <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+            <a class="navbar-brand" href="./home.html"><img src="../imgs/icon.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="navbar-toggler-icon" style='font-size: 40px;'></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                        <li class="nav-item">
+                                <i class='fas fa-home'  style='font-size:30px; color: rgb(102, 102, 102); float: left; margin-right: 5px;'></i>
+                            <a class="nav-link" href="./home.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                                <i class='fas fa-clipboard-list'  style='font-size:35px; color: rgb(102, 102, 102); float: left;  margin-right: 5px;'></i>
+                                <a class="nav-link" href="./index.html">Ingredients <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                                <i class='fas fa-search-plus'  style='font-size:35px; color: rgb(102, 102, 102); float: left;  margin-right: 5px;'></i>
+                            <a class="nav-link" href="./add.html">Add Item</a>
+                        </li>
+                        <li class="nav-item">
+                                <i class='fas fa-book'  style='font-size:30px; color: rgb(102, 102, 102); float: left; margin-right: 5px;'></i>
+                            <a class="nav-link" href="./recipes.html">Recipes</a>
+                        </li>
+                        <li class="nav-item">
+                                <i class='fas fa-bookmark'  style='font-size:30px; color: rgb(102, 102, 102); float: left; margin-right: 5px;'></i>
+                                <a class="nav-link" href="./savedRecipes.html">My Recipes</a>
+                            </li>
+                        <li class="nav-item">
+                                <i class='fas fa-cog'  style='font-size:30px; color: rgb(102, 102, 102); float: left; margin-right: 5px;'></i>
+                                <a class="nav-link" href="./settings.html">Settings</a>
+                        </li>
+                        <li class="nav-item">
+                                <a class="nav-link logout" href="./login.html">Logout</a>
+                            </li>
+                        </ul>
+            </div>
+    </nav>
+    <form>
+            <input type="button" class="btn back-button" value="&larr;" onclick="history.back();">
+    </form>
+    <h1 class="recipe-title">Search for existing ingredients</h1>
+
+        <form class="form-inline my-2 my-lg-0 tweet-form">
+            <textarea class="search-box" type="text" id="status" name="status" placeholder="Search items..." autocomplete="off"></textarea>
+        </form>
+
+        <h2 class="recipe-title" id="suggestions-title">Suggestions</h2>
+        <div id="suggestions">
+            <div class="row">
+                <div class="col suggestion-col" id="0">
+                    <p class="sugg-food">Eggs</p>
+                    <i class="fa fa-check-circle checkmark" id="checks0" aria-hidden="true" hidden></i>
+                    <img class="sugg-img" src="../imgs/ingredients/eggs.jpg">
+                </div>
+                <div class="col suggestion-col" id="1">
+                        <p class="sugg-food">Cabbage</p>
+                        <i class="fa fa-check-circle checkmark" id="checks1" aria-hidden="true" hidden></i>
+                    <img class="sugg-img" src="../imgs/ingredients/cabbage.jpg">
+                </div>
+                <div class="col suggestion-col" id="2">
+                        <p class="sugg-food">Chicken Breast</p>
+                        <i class="fa fa-check-circle checkmark" id="checks2" aria-hidden="true" hidden></i>
+                        <img class="sugg-img" src="../imgs/ingredients/chicken.jpg">
+                </div>
+                <div class="w-100"></div>
+                <div class="col suggestion-col" id="3">
+                        <p class="sugg-food">Banana</p>
+                        <i class="fa fa-check-circle checkmark" id="checks3" aria-hidden="true" hidden></i>
+                        <img class="sugg-img" src="../imgs/ingredients/banana.jpg">
+                </div>
+                <div class="col suggestion-col" id="4">
+                        <p class="sugg-food">Bread</p>
+                        <i class="fa fa-check-circle checkmark" id="checks4" aria-hidden="true" hidden></i>
+                        <img class="sugg-img" src="../imgs/ingredients/bread.jpg">
+                </div>
+                <div class="col suggestion-col" id="5">
+                        <p class="sugg-food">Rice</p>
+                        <i class="fa fa-check-circle checkmark" id="checks5" aria-hidden="true" hidden></i>
+                        <img class="sugg-img" src="../imgs/ingredients/rice.jpg">
+                </div>
+                <div class="w-100"></div>
+                <div class="col suggestion-col" id="6">
+                        <p class="sugg-food">Tomato</p>
+                        <i class="fa fa-check-circle checkmark" id="checks6" aria-hidden="true" hidden></i>
+                        <img class="sugg-img" src="../imgs/ingredients/tomato.jpg">
+                </div>
+                <div class="col suggestion-col" id="7">
+                        <p class="sugg-food">Spaghetti</p>
+                        <i class="fa fa-check-circle checkmark" id="checks7" aria-hidden="true" hidden></i>
+                        <img class="sugg-img" src="../imgs/ingredients/spaghetti.jpg">
+                </div>
+                <div class="col suggestion-col" id="8">
+                        <p class="sugg-food">Steak</p>
+                        <i class="fa fa-check-circle checkmark" id="checks8" aria-hidden="true" hidden></i>
+                        <img class="sugg-img" src="../imgs/ingredients/steak.jpg">
+                </div>
+              </div>
+        </div>
+
+
+        <script id="entry-template" type="text/x-handlebars-template">
+                <div class="col suggestion-col" id="item-button{{index}}">
+                        <p class="sugg-food">{{food}}</p>
+                        <img class="sugg-img" src="{{pic}}">
+                        <i class="fa fa-check-circle checkmark" id="check{{index}}" aria-hidden="true" hidden></i>
+                        <div class="w-100"></div>
+                </div>
+                <!-- <li class="ingredient" id="item{{index}}"><a>{{food}}</a>
+                <button id="item-button{{index}}" class="item-select btn">Select</button>
+                </li> -->
+        </script>
+
+        <div id="item-search-parent">
+        
+        </div>
+        <div class="footer-break"></div>
+
+        <div class="footer">
+                <div class="footer-item" onclick="location.href='./home.html'">
+                    <i class='fas fa-home'  style='font-size:70px; color: rgb(102, 102, 102) '></i>
+                    <h1>Home</h1>
+                </div>
+                <div class="footer-item" onclick="location.href='./index.html'">
+                    <i class='fas fa-clipboard-list'  style='font-size:70px; color: rgb(102, 102, 102) '></i>
+                    <h1>Ingredients</h1>
+                </div>
+                <div class="footer-item" onclick="location.href='./savedRecipes.html'">
+                    <i class='fas fa-book'  style='font-size:70px; color: rgb(102, 102, 102) '></i>
+                    <h1>My Recipes</h1>
+                </div>
+                <div class="footer-item" onclick="location.href='./settings.html'">
+                    <i class='fas fa-cog'  style='font-size:70px; color: rgb(102, 102, 102) '></i>
+                    <h1>Settings</h1>
+                </div>
+        <br>
+    </body>
+</html>

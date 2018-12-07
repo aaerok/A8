@@ -1,0 +1,118 @@
+<html>
+    <head>
+            <script src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"></script>
+        <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+        <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
+        <script src='https://cdn.jsdelivr.net/lodash/4.17.2/lodash.min.js'></script>
+        <script type="text/javascript" src="../js/savedRecipes.js"></script>
+        <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+    </head>
+    <body>
+    <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+            <a class="navbar-brand" href="./home.html"><img src="../imgs/icon.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="navbar-toggler-icon" style='font-size: 40px;'></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                        <li class="nav-item">
+                                <i class='fas fa-home'  style='font-size:30px; color: rgb(102, 102, 102); float: left; margin-right: 5px;'></i>
+                            <a class="nav-link" href="./home.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                                <i class='fas fa-clipboard-list'  style='font-size:35px; color: rgb(102, 102, 102); float: left;  margin-right: 5px;'></i>
+                                <a class="nav-link" href="./index.html">Ingredients <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                                <i class='fas fa-search-plus'  style='font-size:35px; color: rgb(102, 102, 102); float: left;  margin-right: 5px;'></i>
+                            <a class="nav-link" href="./add.html">Add Item</a>
+                        </li>
+                        <li class="nav-item">
+                                <i class='fas fa-book'  style='font-size:30px; color: rgb(102, 102, 102); float: left; margin-right: 5px;'></i>
+                            <a class="nav-link" href="./recipes.html">Recipes</a>
+                        </li>
+                        <li class="nav-item active">
+                                <i class='fas fa-bookmark'  style='font-size:30px; color: rgb(102, 102, 102); float: left; margin-right: 5px;'></i>
+                                <a class="nav-link" href="./savedRecipes.html">My Recipes</a>
+                            </li>
+                        <li class="nav-item">
+                                <i class='fas fa-cog'  style='font-size:30px; color: rgb(102, 102, 102); float: left; margin-right: 5px;'></i>
+                                <a class="nav-link" href="./settings.html">Settings</a>
+                        </li>
+                        <li class="nav-item">
+                                <a class="nav-link logout" href="./login.html">Logout</a>
+                            </li>
+                        </ul>
+            </div>
+    </nav>
+    <form>
+            <input type="button" class="btn back-button" value="&larr;" onclick="history.back();">
+    </form>
+    <h1 class="recipe-title possible">My Recipes</h1>
+ 
+
+    <script id="saved-recipes-template" type="text/x-handlebars-template">
+    <div class="card-deck" id="{{ingredients}}">
+        <div class="testing">
+            <div class="card" id='card{{index}}' style="margin: 0 auto">
+                <div class="delete-recipe" id='delete{{index}}'><b>&times;</b></div>
+                <img class="card-img-top" src="{{pic}}" alt="Card image cap">
+                <div class="card-body">
+                <h5 class="card-title">{{food}}</h5>
+                <p class="card-text">{{ingredients}}</p>
+                <a href="./singleRecipe.html?recipe={{food}}" class="recipe-btn btn btn-primary">Get Recipe</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </script>
+
+    <div id="saved-recipes">
+
+    </div>
+    <div class="footer">
+            <div class="footer-item">
+                <i class='fas fa-home' onclick="location.href='./home.html'" style='font-size:50px; color: rgb(102, 102, 102) '></i>
+                <h1>Home</h1>
+            </div>
+            <div class="footer-item">
+                <i class='fas fa-clipboard-list'onclick="location.href='./index.html'"  style='font-size:50px; color: rgb(102, 102, 102) '></i>
+                <h1>Ingredients</h1>
+            </div>
+            <div class="footer-item">
+                <i class='fas fa-book' onclick="location.href='./recipes.html'" style='font-size:50px; color: rgb(102, 102, 102) '></i>
+                <h1>Recipes</h1>
+            </div>
+            <div class="footer-item">
+                <i class='fas fa-cog' onclick="location.href='./settings.html'" style='font-size:50px; color: rgb(102, 102, 102) '></i>
+                <h1>Settings</h1>
+            </div>
+        </div>
+
+        <div class="footer">
+                <div class="footer-item" onclick="location.href='./home.html'">
+                    <i class='fas fa-home'  style='font-size:70px; color: rgb(102, 102, 102) '></i>
+                    <h1>Home</h1>
+                </div>
+                <div class="footer-item" onclick="location.href='./index.html'">
+                    <i class='fas fa-clipboard-list'  style='font-size:70px; color: rgb(102, 102, 102) '></i>
+                    <h1>Ingredients</h1>
+                </div>
+                <div class="footer-item" onclick="location.href='./savedRecipes.html'">
+                    <i class='fas fa-book'  style='font-size:70px; color: rgb(102, 102, 102) '></i>
+                    <h1>My Recipes</h1>
+                </div>
+                <div class="footer-item" onclick="location.href='./settings.html'">
+                    <i class='fas fa-cog'  style='font-size:70px; color: rgb(102, 102, 102) '></i>
+                    <h1>Settings</h1>
+                </div>
+    </body>
+</html>

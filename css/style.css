@@ -1,0 +1,513 @@
+body {
+    position: relative;
+    background-color: #f5f5f5;
+    font-family: 'Verdana', 'Helvetica', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* border: 3px solid rgb(119, 119, 119); */
+    width: 100%;
+    margin-bottom: 174px;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: rgb(0, 0, 0);
+    margin-top: 50px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    height: 10%;
+    background-color: rgb(231, 231, 231);
+    margin-top: 50px;
+    width: 100%;
+    z-index: 9999999999999!important;
+}
+
+.footer-item {
+    position: relative;
+    width: 25%;
+    text-align: center;
+    top: 20%;
+    float: left;
+}
+
+.footer-item h1 {
+    font-size: 40px;
+}
+
+.footer-break {
+    height: 200px;
+}
+
+.delete-button {
+    position: relative;
+    float: right;
+    font-size: 38px;
+    width:200px;
+    height: 120px;
+    padding: 5px;
+    margin-top: -60px;
+}
+
+.add-button {
+    position: absolute;
+    color: inherit;
+    margin-left: 40px;
+    bottom: 10px;
+}
+
+.search-recipes {
+    position: absolute;
+    right: 10px;
+    text-decoration: none;
+    color: inherit;
+    bottom: 10px;
+}
+
+.search-recipes:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+#container a {
+    padding: 5px;
+}
+
+#container span {
+    font-size: 50px;
+}
+
+.search-box {
+    font-size: 40px;
+    height: 100px;
+    width: 100%;
+    background: #ffffff;
+    border: 2px solid rgb(175, 175, 175);
+    border-radius: 8px;
+    resize: none;
+    line-height: 20px;
+    padding: 35px;
+}
+
+.search-box:focus {
+    outline: 0;
+    box-shadow: none!important;
+}
+
+.back-button {
+    margin: 10 0 0 10;
+    width: 150px;
+    height: 100px;
+    font-size: 60px;
+}
+
+.add-item-button {
+    padding: 5px 20px 5px 20px;
+    float: right;
+}
+
+.recipe-title {
+    font-size: 75px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: sans-serif, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.possible {
+    font-size: 100px !important;
+    margin-bottom: 30px !important;
+}
+
+.ingredient {
+    width: 100%;
+    height: 300px;
+    border: 1px solid rgb(156, 151, 151);
+    /* box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+    list-style-type: none;
+}
+
+ul {
+    margin: 0 auto;
+    padding: 0;
+}
+
+.ingredient a {
+    font-size: 45px;
+}
+
+.quantity {
+    position: absolute;
+    height: 30px;
+    width: 70px;
+    resize: none;
+    left: 50%;
+}
+
+.delete-single {
+    width: 150px;
+    height: 100px;
+    text-align: center;
+    margin-top: 100px;
+    float: right;
+    z-index: 99999!important;
+    font-size: 40px;
+}
+
+.items-list {
+    height: 200px;
+    padding: 0;
+
+}
+
+.item-select {
+    text-align: center;
+    margin-top: 20px;
+    margin-right: 20px;
+    float: right;
+    background-color: #17a2b8;
+    color: white;
+    width: 150px;
+    height: 100px;
+    font-size: 40px;
+}
+
+.item-select:hover {
+    opacity: 0.7;
+}
+
+.item-select:focus {
+    border: 1px solid green;
+    outline: none;
+}
+
+.recipe-item {
+    width: 95%;
+    min-height: 50px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.recipe-button {
+    padding: 10px;
+    float: right;
+}
+
+.recipe-btn {
+    height: 100px;
+    width: 300px;
+    margin-top: 40px;
+    font-size: 50px;
+    border-radius: 5%;
+    background-color: #17a2b8;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    flex: none;
+    /* size: 100px; */
+    height: 950px;
+    width: 100%;
+    margin-bottom: 80px !important;
+}
+
+.logout {
+    float: right;
+    margin-left: 200px;
+}
+  
+.item-added {
+    z-index: 10000000!important;
+    opacity: 0.8;
+}
+
+.switch {
+    position: relative;
+    float: right;
+    width: 90px;
+    height: 50px;
+    margin-top: -50px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 45px;
+    width: 45px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  .settings {
+      height: 100%;
+      width: 100%;
+  }
+  
+  #notifications1 {
+    padding: 50px 0px 0px 0px;
+    margin: 50px 0px 0px 0px;
+    height: 150px;
+    background-color: rgb(241, 241, 241);
+    width: 100%;
+  }
+
+  #notifications1 h3 {
+    font-size: 40px;
+  }
+
+  #notifications h3 .switch {
+     position: absolute;
+     top: 10%;
+  }
+
+.card-deck {
+    margin-bottom: 100px;
+}
+
+.recipe-pic {
+    width: 100%;
+}
+
+.card-img-top {
+    height: 600px;
+}
+
+.card-body {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.card-title {
+    font-size: 75px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.card-text {
+    font-size: 50px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+#instructions li {
+    padding: 50px;
+}
+
+#save-recipe{
+    float: right;
+    width: 150px;
+    height: 75px;
+    margin-bottom: 20px;
+    font-size: 35px;
+    background-color: #17a2b8;
+}
+
+.delete-recipe {
+    background-color: rgb(165, 165, 165);
+    right: 0%;
+    position: absolute;
+    border-radius: 45%;
+    margin: 10 10 0 0;
+    padding: 8px;
+    font-size: 50px;
+    opacity: 0.9;
+    /* border: 1px solid; */
+    width: 10%;
+    line-height: 75px;
+    text-align: center;
+}
+
+.recipe-title {
+    margin: 0 auto;
+    padding: 20px;
+    font-size: 60px;
+}
+
+.testing {
+    margin: 0 auto;
+}
+
+.slideshow-pic {
+    width: 100%;
+    height: 100%;
+    margin-top: 5%;
+    z-index: 1;
+}
+
+.slide-btn {
+    z-index: 1000;
+    margin-bottom: 75px;
+}
+
+.what-do {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+    font-size: 45px;
+}
+
+.what-do:hover {
+    cursor: pointer;
+}
+
+#what-do-txt {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.navbar-brand {
+    font-size: 50px;
+}
+
+.nav-item {
+    font-size: 35px;
+}
+
+#instructions {
+    font-size: 40px
+}
+
+#login-warning {
+    font-size: 40px;
+}
+
+.text-muted {
+    font-size: 35px;
+}
+
+.carousel-text {
+    z-index: 100000;
+    font-size: 50px;
+    margin-bottom: 250px;
+}
+
+.add-ingredients {
+    font-size: 38px;
+    width:200px;
+    height: 120px;
+    margin-top: -60px;
+    padding: 5px;
+    background-color: #17a2b8;
+    color: white;
+}
+
+.current-item {
+    font-size: 40px;
+}
+
+.current-container {
+    /* position: absolute;
+    bottom: 25%;
+    width: 100%; */
+}
+
+.arrows {
+    background-color: rgb(139, 139, 139);
+    height: 100px;
+    width: 100px;
+    top: 50%;
+    opacity: 0.7
+}
+
+.suggestion-col {
+    font-size: 50px;
+    border: 1px solid black;
+    height: 300px;
+    padding: 0;
+    width: 33%;
+    float: left;
+}
+
+.sugg-img {
+    width: 100%;
+    height: 100%;
+}
+
+.sugg-food {
+    position: absolute;
+    padding-left: 10px;
+    width: 100%;
+    height: 50px;
+    bottom: -5%;
+    z-index: 9999999999!important;
+    background-color: rgb(43, 43, 43);
+    z-index: 2;
+    opacity: 0.8;
+    font-size: 40px;
+    color: white;
+}
+.checkmark {
+    position: absolute;
+    font-size: 140px;
+    color: green;
+    z-index: 9999999999999999!important;
+    right: 30%;
+    bottom: 35%;
+}
+
+.ingredient-container {
+    position: relative;
+    width: 40%;
+    float: left;
+}
+
+.ingredient-title {
+    position: absolute;
+    padding-left: 10px;
+    width: 40%;
+    height: 50px;
+    z-index: 9999999999!important;
+    background-color: rgb(43, 43, 43);
+    z-index: 2;
+    opacity: 0.8;
+    font-size: 40px;
+    color: white;
+}
